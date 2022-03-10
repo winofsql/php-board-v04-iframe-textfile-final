@@ -10,9 +10,9 @@
 </head>
 
 <body>
+<h4 class="alert alert-primary">投稿一覧 (<?= $kensu ?>件)</h4>
 <div id="databody">
 
-    <h2>投稿一覧 (<?= $kensu ?>件)</h2>
     <ul>
         <?= $line_data ?>
     </ul>

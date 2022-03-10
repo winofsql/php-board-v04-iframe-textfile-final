@@ -11,7 +11,7 @@ $kensu = "";
 $view_head_height = "250";
 
 // POST ( FORM からの送信 )
-if( $_SERVER["REQUEST_METHOD"] == "POST" ){
+if ( $_SERVER["REQUEST_METHOD"] == "POST" ) {
 
     write_data();
 
@@ -20,14 +20,14 @@ if( $_SERVER["REQUEST_METHOD"] == "POST" ){
 // *************************************
 // 画面
 // *************************************
-if( $_SERVER["REQUEST_METHOD"] == "GET" && $_GET["page"] != "init" ){
+if ( $_SERVER["REQUEST_METHOD"] == "GET" && $_GET["page"] != "init" ) {
     require_once("view.php");
 }
-if( $_SERVER["REQUEST_METHOD"] == "GET" && $_GET["page"] == "init" ){
+if ( $_SERVER["REQUEST_METHOD"] == "GET" && $_GET["page"] == "init" ) {
     read_data( $dataFile );
     require_once("view2.php");
 }
-if( $_SERVER["REQUEST_METHOD"] == "POST" ){
+if ( $_SERVER["REQUEST_METHOD"] == "POST" ) {
     read_data( $dataFile );
     require_once("view2.php");
 }
