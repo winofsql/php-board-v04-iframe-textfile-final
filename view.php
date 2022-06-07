@@ -36,13 +36,13 @@
             </div>
             <div>
                 <span style='display:inline-block;width:100px;'>
-                ユーザ
+                    ユーザ
                 </span>
                 <input
-                type="text"
-                name="user"
-                class="entry"
-                >
+                    type="text"
+                    name="user"
+                    class="entry"
+                    >
             </div>
             <div>
                 <textarea id="body" name="body"></textarea>
