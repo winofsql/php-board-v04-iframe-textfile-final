@@ -5,26 +5,78 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
     <title>掲示板</title>
-    <link rel="stylesheet" href="iframe-css.php?_=<?= time() ?>&view_head_height=<?= $view_head_height ?>">
-    <link rel="stylesheet" href="client.css?_=<?= time() ?>">
+<style>
+html,body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+#head {
+    width: 100%;
+    height: <?= $view_head_height ?>px;
+    background-color: #fff;
+}
+#extend {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: calc( 100% - 3px );
+    height: calc( 100% - <?= $view_head_height ?>px - 2px );
+    border: solid 2px #c0c0c0;
+}
+
+#body {
+    width: 800px;
+    height: 80px;
+}
+</style>
 
 </head>
 
 <body>
 <div id="head">
     <h3 class="alert alert-primary">掲示板</h3>
-    <div id="content">
-	    <form action="" method="POST" target="myframe">
-	        <div><span style='display:inline-block;width:100px;'>件名</span> <input class="entry" type="text" name="message"> <input type="submit" value="投稿" class="ebutton"></div>
-	        <div><span style='display:inline-block;width:100px;'>ユーザ</span> <input class="entry" type="text" name="user"></div>
+    <div id="content"
+        class="m-4">
+        <form action=""
+            target="myframe"
+            method="POST">
+	        <div>
+                <span style='display:inline-block;width:100px;'>
+                    件名
+                </span>
+                <input
+                    type="text"
+                    name="message"
+                    style='width:600px;'
+                    >
+                <input
+                    type="submit"
+                    name="send"
+                    value="投稿"
+                    class="ms-3"
+                    >
+            </div>
+	        <div>
+                <span style='display:inline-block;width:100px;'>
+	               ユーザ
+	            </span>
+	            <input
+	               type="text"
+	               name="user"
+	               style='width:600px;'
+	               >
+            </div>
 	        <div>
 	            <textarea id="body" name="body"></textarea>
 	        </div>
-	    </form>
+        </form>
     </div>
 </div>
 
-<iframe id="extend" src="control.php?page=init" name="myframe"></iframe>
+<iframe id="extend" src="init_page.php" name="myframe"></iframe>
 
 </body>
 </html>
