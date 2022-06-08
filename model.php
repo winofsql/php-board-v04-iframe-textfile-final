@@ -70,8 +70,8 @@ function read_data( $dataFile ) {
         foreach ($posts as $post) {
             $lines = explode( "\t", $post );
 
-            $message = h( $lines[0] );
-            $user = h( $lines[1] );
+            $message = htmlspecialchars( $lines[0] );
+            $user = htmlspecialchars( $lines[1] );
             $time_stamp = $lines[2];
             $body = $lines[3];
 

@@ -5,11 +5,6 @@ header( "Content-Type: text/html; charset=utf-8" );
 
 require_once("model.php");
 
-$dataFile = 'board.dat';
-$line_data = "";
-$kensu = "";
-$view_head_height = "250";
-
 // POST ( FORM からの送信 )
 if ( $_SERVER["REQUEST_METHOD"] == "POST" ) {
 
