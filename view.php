@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
     <title>掲示板 v04</title>
-    
+
     <link rel="stylesheet" href="iframe-css.php?_=<?= time() ?>&view_head_height=<?= $view_head_height ?>">
     <link rel="stylesheet" href="client.css?_=<?= time() ?>">
 
@@ -13,7 +13,10 @@
 
 <body>
 <div id="head">
-    <h3 class="alert alert-primary">掲示板</h3>
+    <h3 class="alert alert-primary">
+        <a href="control.php">掲示板</a>
+        <a href=".." style="float:right;text-decoration:none;">📂</a>
+    </h3>
     <div id="content"
         >
         <form action=""
